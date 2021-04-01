@@ -1,0 +1,21 @@
+{
+    "name": "karim/story-app",
+    "description": "story app",
+    "license": "All rights reserved",
+    "authors": [
+       {
+            "name": "Karim Gehad",
+            "email": "karim2jihad@gmail.com"
+        },
+        {
+            "name": "Lamyaa El Ajii",
+            "email": "lamyaaelaji2000@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    }
+}
