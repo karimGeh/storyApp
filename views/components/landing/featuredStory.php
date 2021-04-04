@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . "/storyCard.php";
+include_once __DIR__ . "/../common/storyCard.php";
 
 ?>
 <div class="featured-story-container">

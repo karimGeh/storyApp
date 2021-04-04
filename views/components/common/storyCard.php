@@ -12,11 +12,17 @@ function storyCard($story)
     </pre> -->
     <!-- <?php echo var_dump(strlen("karim")); ?> -->
 
-    <div class="card-container">
+    <div class="card-container" id="test">
         <div class="author">
             <img src="<?php echo $author['image']; ?>" alt="">
             <div class="info">
-                <h5><?php echo $author['username']; ?></h5>
+                <h5>
+                    <?php
+                    echo strlen($author['username']) <= 12
+                        ? $author['username']
+                        : substr($author['username'], 0, 10) . "..";
+                    ?>
+                </h5>
                 <h6>
                     <?php echo $author['NStories']; ?>
                     <?php echo $author['NStories'] > 1 ? " stories" : " story"; ?>
@@ -25,12 +31,18 @@ function storyCard($story)
         </div>
         <div class="story">
             <h4 class="title">
-                <?php echo $story['title']; ?>
+                <?php
+                echo strlen($story['title']) <= 11
+                    ? $story['title']
+                    : substr($story['title'], 0, 9) . "..";
+
+                ?>
+
             </h4>
             <h6 class="subtitle">
                 <?php echo $story['subtitle']; ?>
             </h6>
-            <p class="story">
+            <p class="story-content">
                 <?php echo strlen($story['story']) > 200 ? substr($story['story'], 0, 200) : $story['story']; ?>
                 <a href="/story/<?php echo $story["id"] ?>"> ... read more</a>
             </p>
