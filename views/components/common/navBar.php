@@ -1,5 +1,5 @@
 <?php
-$user = $_SESSION['user'] ?? [
+$user = $params['user'] ?? [
     'username' => '',
 ];
 if (strpos($_SERVER["REQUEST_URI"], "?")) {
@@ -155,7 +155,7 @@ $classes = [
         margin-top: 2rem;
     }
 
-    .forms-container form input:nth-last-of-type(2) {
+    .forms-container form label:nth-last-of-type(1) {
 
         margin-bottom: 2rem;
     }
@@ -204,18 +204,32 @@ $classes = [
                 <div class="logo">StoryApp</div>
                 <form action="/user/login" method="post" class="login--form " id="login-form">
                     <p>Login to your account </p>
-                    <label id="emailError"></label>
+                    <label id="globalError-login"></label>
+
                     <input type="Email" name='email' placeholder="Email">
-                    <label id="passwordError"></label>
+                    <label id="emailError-login"></label>
+
                     <input type="Password" name='password' placeholder="Password">
+                    <label id="passwordError-login"></label>
+
                     <input type="submit" value="LOGIN">
                 </form>
                 <form action="/user/register" class="register--form hidden" id="register-form">
                     <p>Register a new account</p>
+                    <label id="globalError-register"></label>
+
                     <input type="text" name="username" placeholder="Username">
+                    <label id="usernameError-register"></label>
+
                     <input type="email" name='email' placeholder="Email">
+                    <label id="emailError-register"></label>
+
                     <input type="password" name='password' placeholder="Password">
+                    <label id="passwordError-register"></label>
+
                     <input type="password" name='confirmPassword' placeholder="Confirm Password">
+                    <label id="confirmPasswordError-register"></label>
+
                     <input type="submit" value="SIGNUP">
                 </form>
             </div>

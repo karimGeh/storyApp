@@ -23,6 +23,10 @@
     ?>
 
 
+    <script src="/public/auth.js"></script>
+    <script src="/public/main.js"></script>
+
+
 </body>
 
 </html>

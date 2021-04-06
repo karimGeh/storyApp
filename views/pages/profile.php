@@ -62,6 +62,7 @@ $user = $params["user"] ?? []
             <a href="/create" id="">Create new story</a>
             <button id="">Own stories</button>
             <button id="">Favorites</button>
+            <button id="">Edit Profile</button>
             <button id="logout">Logout</button>
         </div>
     </div>

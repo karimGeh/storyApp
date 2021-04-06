@@ -1,4 +1,12 @@
 <div class="about-container">
-    <h4 class="title">About</h4>
-    <div class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    <h4 class="title">Your story matters. Let the world hear it</h4>
+    <div class="about">
+        <h4>
+            Hi, we are StoryApp.
+        </h4>
+        <p>
+            We’re a platform for stories . We’re using groundbreaking technology to set stories free into a world of unbridled possibility.
+            StoryApp is home to a lot of readers and writers that connect through the power of story . Join StoryApp means being part of a unique work culture that’s centred around something we all believe in using technology to find new ways to tell the world’s stories. When you share your story on StoryApp, your readers escape with you into the world you’ve built, become invested in your characters, and connect to you and your story like never before.
+        </p>
+    </div>
 </div>

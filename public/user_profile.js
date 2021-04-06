@@ -1,5 +1,7 @@
 const logout = document.getElementById("logout");
-
+const changePhoto = document.getElementById("change-photo");
+const photo = document.getElementById("photo");
+const formPhoto = document.getElementById("updatePhoto");
 // const backend = "localhost:8000";
 
 logout.addEventListener("click", () => {
@@ -15,6 +17,24 @@ logout.addEventListener("click", () => {
 			}
 		});
 });
+changePhoto.addEventListener("click", () => {
+	photo.click();
+});
+photo.addEventListener("change", () => {
+	let formData = new FormData(document.forms["updatePhoto"]);
+	fetch(`/user/updatePhoto`, {
+		method: "POST",
+		body: formData,
+	})
+		.then((res) => res.json())
+		.then((body) => {
+			if (!body) return;
+
+			if (body.redirect) {
+				window.location.reload(true);
+			}
+		});
+});
 
 const deleteStory = (id) => {
 	const simple_form = new FormData();
@@ -25,7 +45,6 @@ const deleteStory = (id) => {
 	})
 		.then((res) => res.json())
 		.then((body) => {
-			console.log(body);
 			if (!body) {
 				return;
 			}

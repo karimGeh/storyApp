@@ -7,10 +7,6 @@ function storyCard($story)
     $author = Database::$db->load($story["author"])[0];
     $author["NStories"] = count(json_decode($author["stories"]));
 ?>
-    <!-- <pre>
-        <?php echo var_dump(count(json_decode($author["stories"]))); ?>
-    </pre> -->
-    <!-- <?php echo var_dump(strlen("karim")); ?> -->
 
     <div class="card-container" id="test">
         <div class="author">

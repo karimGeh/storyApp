@@ -35,9 +35,10 @@ const hidePopout = () => {
 popoutContainer.addEventListener("click", (e) => {
 	e.stopImmediatePropagation();
 });
-
-login.addEventListener("click", showLogin);
-register.addEventListener("click", showRegister);
+if (login) {
+	login.addEventListener("click", showLogin);
+	register.addEventListener("click", showRegister);
+}
 popout.addEventListener("click", hidePopout);
 popoutLoginNavigation.addEventListener("click", showLogin);
 popoutRegisterNavigation.addEventListener("click", showRegister);

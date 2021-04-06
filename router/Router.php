@@ -17,6 +17,49 @@ class Router
         $this->database = $database;
     }
 
+    public function matches($keys, $values)
+    {
+        $matchedParams = [];
+
+        if (count($keys) != count($values)) {
+            return [];
+        }
+
+        foreach ($values as $key => $value) {
+            // echo "<pre>";
+            // echo $keys[$key];
+            // echo var_dump(is_numeric(strpos($keys[$key], ':')));
+            // echo "</pre>";
+            if ($keys[$key] != $value && !is_numeric(strpos($keys[$key], ':'))) {
+                return [];
+            }
+            if ($keys[$key] != $value && is_numeric(strpos($keys[$key], ':'))) {
+                $serverKey = str_replace(array(":"), "", $keys[$key]);
+                $matchedParams[$serverKey] = $value;
+            }
+        }
+
+        return $matchedParams;
+    }
+
+    public function params($url, $key, $fn)
+    {
+
+        $keys = explode("/", $url);
+        $values = explode("/", $_SERVER['PATH_INFO'] ?? "");
+
+        $matchedParams = $this->matches($keys, $values);
+        // exit;
+
+        if (!empty($matchedParams)) {
+            $_SERVER['PATH_INFO'] = $url;
+            $_SERVER['matchedParams'] = $matchedParams;
+        }
+        // header('Content-type: application/json');
+        // echo json_encode($_SERVER);
+        // exit;
+    }
+
     public function get($url, $fn)
     {
         $this->getRoutes[$url] = $fn;
@@ -43,13 +86,13 @@ class Router
         if (!$fn) {
             echo '<h1>404 Page not found</h1>';
             exit;
+        } else {
+            call_user_func($fn, $this);
+            # code...
         }
-        // $fn["0"]->index($this);
-        call_user_func($fn, $this);
     }
     public function renderView($view, $layout, $params = [])
     {
-        // $params = $params;
         ob_start();
         include __DIR__ . "/../views/$view.php";
         $params["content"] = ob_get_clean();

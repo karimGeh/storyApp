@@ -157,14 +157,19 @@ nav .links .active {
 	justify-content: center;
 }
 
-.about-container h4,
+.about-container > h4,
 .featured-story-container > h4 {
 	text-transform: uppercase;
+	text-align: center;
 	margin: 0 0 2rem 0;
 	font-size: 2rem;
 	font-weight: lighter;
+	color: var(--color-five) !important;
 }
 
+.about-container .about h4 {
+	margin: 1rem;
+}
 .about-container .about {
 	width: 80%;
 	max-width: 1000px;
@@ -215,6 +220,7 @@ nav .links .active {
 }
 .card-container:hover {
 	transform: scale(1.1) !important;
+	z-index: 99;
 	-webkit-box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);
 	-moz-box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);
 	box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);

@@ -8,8 +8,8 @@ include_once __DIR__ . "/../common/storyCard.php";
 
         <?php
         if (isset($params["stories"])) {
-            foreach ($params["stories"] as $story) {
-                storyCard($story);
+            foreach ($params["stories"] as $key => $story) {
+                storyCard($params["stories"][($key + 2) % 3]);
             }
         }
         ?>

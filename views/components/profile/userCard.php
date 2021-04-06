@@ -40,6 +40,7 @@ $user["NStories"] = count(json_decode($user["stories"]));
         width: 2rem;
         height: 2rem;
         border: 0;
+        outline: 0;
 
         border-radius: 50%;
         font-size: 1.3rem;
@@ -79,7 +80,13 @@ $user["NStories"] = count(json_decode($user["stories"]));
         text-align: justify;
     }
 </style>
+
 <div class="card_container">
+
+    <form id="updatePhoto">
+        <input type="file" id="photo" name="photo" style="display:none" />
+    </form>
+
     <div class="imgcontainer">
         <img src="<?php echo $user['image']; ?>" alt="user profile">
         <button id="change-photo">
@@ -94,11 +101,8 @@ $user["NStories"] = count(json_decode($user["stories"]));
             <?php echo $user['NStories']; ?>
             <?php echo $user['NStories'] > 1 ? " stories" : " story"; ?>
         </h5>
+
         <p>
-            Lorem ipsum dolor sit amet consectetur,
-            adipisicing elit. Rem sapiente ratione
-            necessitatibus cumque earum, quis doloremque
-            eius deleniti natus eligendi?
             <?php echo $user['bio']; ?>
         </p>
     </div>
