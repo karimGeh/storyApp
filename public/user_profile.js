@@ -5,7 +5,7 @@ const formPhoto = document.getElementById("updatePhoto");
 // const backend = "localhost:8000";
 
 logout.addEventListener("click", () => {
-	fetch(`/user/logout`, {
+	fetch(`/api/user/logout`, {
 		method: "POST",
 	})
 		.then((res) => res.json())
@@ -22,7 +22,7 @@ changePhoto.addEventListener("click", () => {
 });
 photo.addEventListener("change", () => {
 	let formData = new FormData(document.forms["updatePhoto"]);
-	fetch(`/user/updatePhoto`, {
+	fetch(`/api/user/updatePhoto`, {
 		method: "POST",
 		body: formData,
 	})
@@ -39,7 +39,7 @@ photo.addEventListener("change", () => {
 const deleteStory = (id) => {
 	const simple_form = new FormData();
 	simple_form.append("id", id);
-	fetch("/story/delete", {
+	fetch("/api/story/delete", {
 		method: "POST",
 		body: simple_form,
 	})

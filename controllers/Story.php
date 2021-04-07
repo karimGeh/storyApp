@@ -28,6 +28,26 @@ class Story
 
         $router->renderView('pages/createStory', 'layouts/default', $params);
     }
+    public static function readStory(Router $router)
+    {
+        $params = [
+            "title" => "read Story | StoryApp",
+        ];
+        session_start();
+        $user = User::isAuth($router->database);
+        $params['user'] = $user;
+        $params['storyId'] = $_SERVER['matchedParams']['storyId'];
+        $params['story'] = $router->database->getStoryById($params['storyId'])["0"];
+        if (empty($params['story'])) {
+            header("Location: /stories");
+            exit;
+        }
+        $params['author'] = $router->database->load($params['story']['author'])["0"];
+        $params['suggestions'] = $router->database->getRandomStories($params['storyId']);
+        $title = $params['story']['title'];
+        $params['title'] = "$title | StoryApp";
+        $router->renderView('pages/singleStory', 'layouts/default', $params);
+    }
     public static function createStory(Router $router)
     {
 

@@ -221,4 +221,28 @@ class User
         // exit;
         $router->renderView('pages/profile', 'layouts/default', $params);
     }
+    public static function visitUser(Router $router)
+    {
+
+        session_start();
+        // session_destroy();
+        // var_dump($_SESSION);
+        $user = self::isAuth($router->database);
+        $params = [
+            "title" => "Profile | StoryApp",
+            "user" => $user,
+        ];
+        $params['userId'] = $_SERVER['matchedParams']['userId'];
+        $params['userPage'] = $router->database->load($params['userId'])["0"];
+        if (empty($params['userPage'])) {
+            header("Location: /stories");
+            exit;
+        }
+        $params['title'] = $params['userPage']['username'] . " | StoryApp";
+
+
+
+        // exit;
+        $router->renderView('pages/userPage', 'layouts/default', $params);
+    }
 }

@@ -4,14 +4,15 @@ thecreateform.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let formData = new FormData(document.forms["form_create_story"]);
 	formData.set("id", storyId);
-	fetch("/story/edit", {
+	fetch("/api/story/edit", {
 		method: "POST",
 		body: formData,
 	})
 		.then((res) => {
-			return res.text();
+			return res.json();
 		})
 		.then((body) => {
+			console.log(body);
 			if (!body) {
 				console.log("server errors");
 				return;

@@ -57,6 +57,14 @@ class Database
 
         return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
+    public static function getRandomStories($id)
+    {
+        $statement = self::$db->pdo->prepare("SELECT * FROM stories WHERE id <> :id ORDER BY RAND() LIMIT 3; ");
+        $statement->bindValue(":id", "$id");
+        $statement->execute();
+
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     public static function deleteStoryById($id,)
     {

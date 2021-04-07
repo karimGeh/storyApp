@@ -77,9 +77,9 @@
         <div class="footer-navigation">
             <a href="/">Home</a>
             <a href="/stories">Stories</a>
-            <a href="/writers">Writers</a>
+            <!-- <a href="/writers">Writers</a>
             <a href="/about">About</a>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact</a> -->
         </div>
     </div>
     <div class="copyright">

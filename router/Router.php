@@ -42,9 +42,10 @@ class Router
         return $matchedParams;
     }
 
-    public function params($url, $key, $fn)
+    public function params($url)
     {
 
+        // header('Content-type: application/json');
         $keys = explode("/", $url);
         $values = explode("/", $_SERVER['PATH_INFO'] ?? "");
 
@@ -52,10 +53,14 @@ class Router
         // exit;
 
         if (!empty($matchedParams)) {
+
             $_SERVER['PATH_INFO'] = $url;
             $_SERVER['matchedParams'] = $matchedParams;
+            $_SERVER['keys'] = $keys;
+            $_SERVER['values'] = $values;
         }
-        // header('Content-type: application/json');
+
+
         // echo json_encode($_SERVER);
         // exit;
     }

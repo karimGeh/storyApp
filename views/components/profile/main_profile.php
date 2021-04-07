@@ -17,7 +17,7 @@
 
     }
 
-    .story_user_card_containre {
+    .story_user_card_container {
         cursor: pointer;
         width: 300px;
         height: 400px;
@@ -36,14 +36,14 @@
         transition: 0.3s all ease-in-out;
     }
 
-    .story_user_card_containre:hover {
+    .story_user_card_container:hover {
         transform: scale(1.1) !important;
         -webkit-box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);
         -moz-box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);
         box-shadow: 0px 0px 25px 7px rgba(0, 0, 0, 0.45);
     }
 
-    .story_user_card_containre .author {
+    .story_user_card_container .author {
         width: 100%;
         height: 20%;
 
@@ -62,32 +62,32 @@
         box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.45);
     }
 
-    .story_user_card_containre .author img {
+    .story_user_card_container .author img {
         width: 60px;
         height: 60px;
         border-radius: 50%;
         object-fit: cover;
     }
 
-    .story_user_card_containre .author .info {
+    .story_user_card_container .author .info {
         flex: 1;
         padding-left: 1rem;
     }
 
-    .story_user_card_containre .author .info h5 {
+    .story_user_card_container .author .info h5 {
         font-size: larger;
         text-transform: uppercase;
         color: var(--color-one);
         /* opacity: 0; */
     }
 
-    .story_user_card_containre .author .info h6 {
+    .story_user_card_container .author .info h6 {
         font-size: 1rem;
         color: var(--color-five);
         /* opacity: 0; */
     }
 
-    .story_user_card_containre .story {
+    .story_user_card_container .story {
         margin: 1rem 0;
         flex: 1;
         display: flex;
@@ -97,7 +97,7 @@
         padding: 1rem 0rem;
     }
 
-    .story_user_card_containre .story h4 {
+    .story_user_card_container .story h4 {
         text-transform: uppercase;
         /* margin: 0 0 2rem 0; */
         font-size: 2rem;
@@ -105,14 +105,14 @@
         color: var(--color-three);
     }
 
-    .story_user_card_containre .story h6 {
+    .story_user_card_container .story h6 {
         /* margin: 0 0 2rem 0; */
         font-size: 1rem;
         font-weight: lighter;
         color: var(--color-two);
     }
 
-    .story_user_card_containre .story .story-content {
+    .story_user_card_container .story .story-content {
         padding: 2rem 1rem 0;
         flex: 1;
         text-align: justify;
@@ -120,7 +120,7 @@
         /* color: var(--color-five); */
     }
 
-    .story_user_card_containre .story .story-content a {
+    .story_user_card_container .story .story-content a {
         opacity: 1;
         color: var(--color-three);
         font-size: large;
@@ -128,7 +128,7 @@
         /* color: var(--color-five); */
     }
 
-    .story_user_card_containre .controllers {
+    .story_user_card_container .controllers {
         width: 100%;
         height: 10%;
         /* border: 2px solid red; */
@@ -141,7 +141,7 @@
         box-shadow: 0px 0px 25px 2px rgba(0, 0, 0, 0.45);
     }
 
-    .story_user_card_containre .controllers>* {
+    .story_user_card_container .controllers>* {
         flex-basis: 100%;
         height: 100%;
         cursor: pointer;
@@ -154,13 +154,13 @@
         /* border-radius: 20px 0 0 0; */
     }
 
-    .story_user_card_containre .controllers>*:hover {
+    .story_user_card_container .controllers>*:hover {
         /* border-radius: 20px 0 0 0; */
         color: var(--color-six);
         background: var(--color-seven);
     }
 
-    .story_user_card_containre .controllers a {
+    .story_user_card_container .controllers a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -169,12 +169,12 @@
         min-height: 3rem;
     }
 
-    .story_user_card_containre .controllers a:nth-of-type(1) {
+    .story_user_card_container .controllers a:nth-of-type(1) {
         border-radius: 10px 0 0 10px;
         border-right: 2px solid var(--color-seven);
     }
 
-    .story_user_card_containre .controllers a:nth-of-type(3) {
+    .story_user_card_container .controllers a:nth-of-type(3) {
         border-radius: 0 10px 10px 0;
         border-left: 2px solid var(--color-seven);
     }

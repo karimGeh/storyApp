@@ -239,9 +239,9 @@ $classes = [
     <div class="links">
         <a href="/" class="<?php echo $classes['home'] ?>">Home</a>
         <a href="/stories" class="<?php echo $classes['stories'] ?>">Stories</a>
-        <a href="/writers" class="<?php echo $classes['writers'] ?>">Writers</a>
+        <!-- <a href="/writers" class="<?php echo $classes['writers'] ?>">Writers</a>
         <a href="/about" class="<?php echo $classes['about'] ?>">About</a>
-        <a href="/contact" class="<?php echo $classes['contact'] ?>">Contact</a>
+        <a href="/contact" class="<?php echo $classes['contact'] ?>">Contact</a> -->
     </div>
     <div class="user">
         <?php if ($user['username']) {

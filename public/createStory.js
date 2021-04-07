@@ -3,7 +3,7 @@ const thecreateform = document.getElementById("form_create_story");
 thecreateform.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let formData = new FormData(document.forms["form_create_story"]);
-	fetch("/story/create", {
+	fetch("/api/story/create", {
 		method: "POST",
 		body: formData,
 	})

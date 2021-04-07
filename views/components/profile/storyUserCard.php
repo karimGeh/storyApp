@@ -1,4 +1,4 @@
-<div class="story_user_card_containre">
+<div class="story_user_card_container">
     <div class="story">
         <h4 class="title">
             <?php

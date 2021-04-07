@@ -16,7 +16,7 @@ const registerConfirmPasswordError = document.getElementById(
 loginForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let formData = new FormData(document.forms["login-form"]);
-	fetch("/user/login", {
+	fetch("/api/user/login", {
 		method: "POST",
 		body: formData,
 	})
@@ -55,7 +55,7 @@ loginForm.addEventListener("submit", (e) => {
 registerForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	let formData = new FormData(document.forms["register-form"]);
-	fetch("/user/register", {
+	fetch("/api/user/register", {
 		method: "POST",
 		body: formData,
 	})

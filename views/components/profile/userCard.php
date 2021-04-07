@@ -4,15 +4,6 @@ $user["NStories"] = count(json_decode($user["stories"]));
 
 ?>
 <style>
-
-</style>
-
-<!-- <pre>
-<?php
-// echo var_dump($user);
-?>
-</pre> -->
-<style>
     .card_container {
         width: 100%;
 
