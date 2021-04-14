@@ -17,7 +17,8 @@ class Database
     public function __construct()
     {
         // initialize connection to database
-        $this->pdo = new PDO('mysql:host=localhost;port=3306;dbname=storyApp', 'root', '');
+        $this->pdo = new PDO('mysql:host=sql210.epizy.com;port=3306;dbname=epiz_28329676_storyApp', 'epiz_28329676', ' 	
+        jzi5faZDXtcyU5T');
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         self::$db = $this;
